@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Carro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Simulador de Customização</h1>
+    </header>
+
+    <main class="container">
+        <div class="car-viewer">
+            <img id="carImage" src="images/carro-base.png" alt="Carro Personalizado">
+        </div>
+
+        <div class="controls">
+            <h2>Escolha a Cor:</h2>
+            <button class="color-btn" onclick="changeColor('vermelho')">Vermelho</button>
+            <button class="color-btn" onclick="changeColor('azul')">Azul</button>
+            <button class="color-btn" onclick="changeColor('preto')">Preto</button>
+
+            <h2>Escolha as Rodas:</h2>
+            <button class="wheel-btn" onclick="changeWheels('esportivas')">Rodas Esportivas</button>
+            <button class="wheel-btn" onclick="changeWheels('classicas')">Rodas Clássicas</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
