@@ -13,97 +13,39 @@
     </header>
 
     <main class="container">
+        <!-- Imagem do carro -->
         <div class="car-viewer">
-            <img id="img/carro 3 png.png" src="img/carro 3 png.png" alt="Carro Personalizado">
+            <img id="carImage" src="img/carroA.png" alt="Carro Personalizado">
         </div>
 
+        <!-- Botões de customização -->
         <div class="controls">
             <h2>Escolha a Cor:</h2>
-            <button class="color-btn" onclick="changeColor('vermelho')">Vermelho</button>
-            <button class="color-btn" onclick="changeColor('azul')">Azul</button>
-            <button class="color-btn" onclick="changeColor('preto')">Preto</button>
+            <button onclick="changeCarColor('vermelho')">Vermelho</button>
+            <button onclick="changeCarColor('azul')">Azul</button>
+            <button onclick="changeCarColor('preto')">Preto</button>
 
             <h2>Escolha as Rodas:</h2>
-            <button class="wheel-btn" onclick="changeWheels('esportivas')">Rodas Esportivas</button>
-            <button class="wheel-btn" onclick="changeWheels('classicas')">Rodas Clássicas</button>
+            <button onclick="changeWheels('esportivas')">Rodas Esportivas</button>
+            <button onclick="changeWheels('classicas')">Rodas Clássicas</button>
         </div>
     </main>
 
+    <hr>
+
+    <section class="dyno">
+        <h1>Simulador de Dinamômetro</h1>
+        <img id="car" src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Tesla_Model_3_parked%2C_front_driver_side.jpg" alt="Carro">
+
+        <div class="gauge">RPM: <span id="rpm">0</span></div>
+        <div class="gauge">Torque (Nm): <span id="torque">0</span></div>
+        <div class="gauge">Potência (HP): <span id="power">0</span></div>
+
+        <div id="powerBar"></div>
+
+        <button onclick="startTest()">Iniciar Teste</button>
+    </section>
+
     <script src="script.js"></script>
-</body>
-    
-<body>
-<head>
-  <meta charset="UTF-8">
-  <title>Simulador de Dinamômetro</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #111;
-      color: #fff;
-    }
-    #car {
-      width: 300px;
-      margin: 20px auto;
-      display: block;
-    }
-    .gauge {
-      margin-top: 20px;
-      font-size: 20px;
-    }
-    #powerBar {
-      height: 30px;
-      width: 0;
-      background: lime;
-      margin: 10px auto;
-      transition: width 0.2s;
-    }
-    button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 18px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-</body>
-<body>
-  <h1>Simulador de Dinamômetro</h1>
-  <img id="car" src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Tesla_Model_3_parked%2C_front_driver_side.jpg" alt="Carro">
-  
-  <div class="gauge">RPM: <span id="rpm">0</span></div>
-  <div class="gauge">Torque (Nm): <span id="torque">0</span></div>
-  <div class="gauge">Potência (HP): <span id="power">0</span></div>
-  
-  <div id="powerBar"></div>
-  
-  <button onclick="startTest()">Iniciar Teste</button>
-
-  <script>
-    let rpm = 0;
-    let interval;
-
-    function startTest() {
-      rpm = 0;
-      clearInterval(interval);
-
-      interval = setInterval(() => {
-        if (rpm >= 8000) {
-          clearInterval(interval);
-        } else {
-          rpm += 250; // aceleração progressiva
-          let torque = (300 - (rpm / 50)) > 0 ? (300 - (rpm / 50)) : 50; // curva simplificada
-          let power = (torque * rpm) / 7127; // fórmula HP = Torque (Nm) * RPM / 7127
-
-          document.getElementById("rpm").innerText = rpm;
-          document.getElementById("torque").innerText = torque.toFixed(1);
-          document.getElementById("power").innerText = power.toFixed(1);
-
-          document.getElementById("powerBar").style.width = (power * 2) + "px";
-        }
-      }, 200);
-    }
-  </script>
 </body>
 </html>
