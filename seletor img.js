@@ -1,20 +1,35 @@
-// Função para mudar a cor do carro
-function changeColor(color) {
+// Trocar cor do carro
+function changeCarColor(color) {
     const carImage = document.getElementById('carImage');
-    // Adicionamos a lógica para a cor aqui
-    // No futuro, você pode ter uma imagem para cada cor
-    // Por exemplo: carImage.src = `images/carro-${color}.png`;
-    
-    // Para um exemplo simples, vamos apenas mudar a cor de fundo da imagem
-    carImage.style.backgroundColor = color;
+    carImage.src = `img/carro-${color}.png`;
 }
 
-// Função para mudar as rodas
+// Trocar rodas
 function changeWheels(wheels) {
-    const carImage = document.getElementById('carImage');
-    // A lógica para mudar as rodas
-    // Por exemplo: carImage.src = `images/carro-com-rodas-${wheels}.png`;
-    
-    // Para um exemplo simples, vamos apenas exibir um alerta
-    alert(`Rodas ${wheels} selecionadas!`);
+    alert(`Rodas ${wheels} selecionadas! (aqui poderia trocar a imagem no futuro)`);
+}
+
+// Simulador de dinamômetro
+let rpm = 0;
+let interval;
+
+function startTest() {
+    rpm = 0;
+    clearInterval(interval);
+
+    interval = setInterval(() => {
+        if (rpm >= 8000) {
+            clearInterval(interval);
+        } else {
+            rpm += 250; 
+            let torque = (300 - (rpm / 50)) > 0 ? (300 - (rpm / 50)) : 50;
+            let power = (torque * rpm) / 7127;
+
+            document.getElementById("rpm").innerText = rpm;
+            document.getElementById("torque").innerText = torque.toFixed(1);
+            document.getElementById("power").innerText = power.toFixed(1);
+
+            document.getElementById("powerBar").style.width = (power * 2) + "px";
+        }
+    }, 200);
 }
