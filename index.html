@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Carro</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Carro</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Simulador de Customização</h1>
-    </header>
+  <header>
+    <h1>Simulador de Customização</h1>
+  </header>
 
-    <main class="container">
-        <!-- Imagem do carro -->
-        <div class="car-viewer">
-            <img id="carImage" src="img/carroA.png" alt="Carro Personalizado">
-        </div>
+  <main class="container">
+    <!-- Imagem do carro -->
+    <div class="car-viewer">
+      <img id="carImage" src="img/carro-vermelho-esportivas.png" alt="Carro">
+    </div>
 
-        <!-- Botões de customização -->
-        <div class="controls">
-            <h2>Escolha a Cor:</h2>
-            <button onclick="changeCarColor('vermelho')">Vermelho</button>
-            <button onclick="changeCarColor('azul')">Azul</button>
-            <button onclick="changeCarColor('preto')">Preto</button>
+    <!-- Botões de customização -->
+    <div class="controls">
+      <h2>Escolha a Cor:</h2>
+      <button onclick="setColor('vermelho')">Vermelho</button>
+      <button onclick="setColor('azul')">Azul</button>
+      <button onclick="setColor('preto')">Preto</button>
 
-            <h2>Escolha as Rodas:</h2>
-            <button onclick="changeWheels('esportivas')">Rodas Esportivas</button>
-            <button onclick="changeWheels('classicas')">Rodas Clássicas</button>
-        </div>
-    </main>
+      <h2>Escolha as Rodas:</h2>
+      <button onclick="setWheels('esportivas')">Esportivas</button>
+      <button onclick="setWheels('classicas')">Clássicas</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 
     <hr>
 
