@@ -1,12 +1,23 @@
-// Trocar cor do carro
-function changeCarColor(color) {
-    const carImage = document.getElementById('carImage');
-    carImage.src = `img/carro-${color}.png`;
+// Estado atual do carro
+let currentColor = "vermelho";   // cor inicial
+let currentWheels = "esportivas"; // rodas iniciais
+
+// Função para definir cor
+function setColor(color) {
+  currentColor = color;
+  updateCarImage();
 }
 
-// Trocar rodas
-function changeWheels(wheels) {
-    alert(`Rodas ${wheels} selecionadas! (aqui poderia trocar a imagem no futuro)`);
+// Função para definir rodas
+function setWheels(wheels) {
+  currentWheels = wheels;
+  updateCarImage();
+}
+
+// Atualiza a imagem do carro conforme a escolha
+function updateCarImage() {
+  const carImage = document.getElementById("carImage");
+  carImage.src = `img/carro-${currentColor}-${currentWheels}.png`;
 }
 
 // Simulador de dinamômetro
