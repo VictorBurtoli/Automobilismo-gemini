@@ -5,13 +5,13 @@ let currentWheels = "esportivas"; // rodas iniciais
 // Função para definir cor
 function setColor(color) {
   currentColor = color;
-  updateCarImage();
+  updateCarImage(carros-preto-normal-lado esquerdo.png,);
 }
 
 // Função para definir rodas
 function setWheels(wheels) {
   currentWheels = wheels;
-  updateCarImage();
+  updateCarImage(carros-preto-normal-lado esquerdo.png,);
 }
 
 // Atualiza a imagem do carro conforme a escolha
