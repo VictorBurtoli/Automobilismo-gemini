@@ -20,7 +20,9 @@ function setColor(color) {
                  carro-azul-espotivo-lado esquerdo.png,
                  carros-preto-esportivo-lado esquerdo.png,
                  carro-azul-espotivo-lado direito.png,
-                 carro-preto-esportivo-lado-direito.png);
+                 carro-preto-esportivo-lado-direito.png,
+                 carro-vermelho-esportivo-lado direito.png,
+                 carro-vermelho-esportivo-lado esquerdo.png);
 }
 
 // Função para definir rodas
@@ -41,7 +43,9 @@ function setWheels(wheels) {
                  carro-azul-espotivo-lado esquerdo.png,
                  carros-preto-esportivo-lado esquerdo.png,
                  carro-azul-espotivo-lado direito.png,
-                 carro-preto-esportivo-lado-direito.png);
+                 carro-preto-esportivo-lado-direito.png,
+                 carro-vermelho-esportivo-lado direito.png,
+                 carro-vermelho-esportivo-lado esquerdo.png);
 }
 
 // Atualiza a imagem do carro conforme a escolha
