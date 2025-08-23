@@ -1,6 +1,6 @@
 // Estado atual do carro
 let currentColor = "vermelho";   // cor inicial
-let currentWheels = "esportivas"; // rodas iniciais
+let currentWheels = "normal"; // rodas iniciais
 
 // Função para definir cor
 function setColor(color) {
