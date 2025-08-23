@@ -11,7 +11,8 @@ function setColor(color) {
                  carro-vermelho-normal-lado esquerdo.png,
                  carro-vermelho-normal-frente.jpg,
                  carro-vermelho-normal-costas.png,
-                 carro-azul-normal-lado esquerdo.png,);
+                 carro-azul-normal-lado esquerdo.png,
+                 carro-azul-normal-frente.png,);
 }
 
 // Função para definir rodas
@@ -23,7 +24,8 @@ function setWheels(wheels) {
                  carro-vermelho-normal-lado esquerdo.png,
                  carro-vermelho-normal-frente.jpg,
                  carro-vermelho-normal-costas.png,
-                 carro-azul-normal-lado esquerdo.png);
+                 carro-azul-normal-lado esquerdo.png,
+                 carro-azul-normal-frente.png);
 }
 
 // Atualiza a imagem do carro conforme a escolha
