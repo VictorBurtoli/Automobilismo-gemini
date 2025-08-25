@@ -1,54 +1,52 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simulador de Carro</title>
+  <title>Simulador Automobilismo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1>Simulador de Customização</h1>
 
-  <header>
-    <h1>Simulador de Customização</h1>
-  </header>
+  <!-- Seletor de cores e rodas -->
+  <div class="painel">
+    <label for="select-cor">Cor:</label>
+    <select id="select-cor">
+      <option value="vermelho">Vermelho</option>
+      <option value="azul">Azul</option>
+      <option value="preto">Preto</option>
+    </select>
 
-  <main class="container">
-    <!-- Imagem do carro -->
-    <div class="car-viewer">
-      <img id="carImage" src="img/carro-vermelho-normais-frente.png" alt="Carro">
-    </div>
+    <label for="select-rodas">Rodas:</label>
+    <select id="select-rodas">
+      <option value="esportivo">Esportivo</option>
+      <option value="classico">Clássico</option>
+    </select>
+  </div>
 
-    <!-- Botões de customização -->
-    <div class="controls">
-      <h2>Escolha a Cor:</h2>
-      <button onclick="setColor('vermelho')">Vermelho</button>
-      <button onclick="setColor('azul')">Azul</button>
-      <button onclick="setColor('preto')">Preto</button>
+  <!-- Imagem do carro -->
+  <div class="painel">
+    <img id="imagem-carro" src="img/carro-vermelho-esportivo-frente.png" alt="Carro personalizado">
+  </div>
 
-      <h2>Escolha as Rodas:</h2>
-      <button onclick="setWheels('esportivas')">Esportivas</button>
-      <button onclick="setWheels('normal')">Clássicas</button>
-    </div>
-  </main>
+  <!-- Botões para mudar ângulos -->
+  <div class="painel">
+    <button id="btn-sequencia1">⟲ Sequência 1</button>
+    <button id="btn-sequencia2">⟳ Sequência 2</button>
+  </div>
 
-  <script src="script.js"></script>
-</body>
+  <!-- Dinamômetro -->
+  <h2>Dinamômetro</h2>
+  <div class="painel">
+    <p>RPM: <span id="rpm">0</span></p>
+    <p>Torque (Nm): <span id="torque">0</span></p>
+    <p>Potência (HP): <span id="hp">0</span></p>
+    <button id="btn-iniciar">Iniciar Teste</button>
+  </div>
 
-    <hr>
-
-    <section class="dyno">
-        <h1>Simulador de Dinamômetro</h1>
-        <img id="car" src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Tesla_Model_3_parked%2C_front_driver_side.jpg" alt="Carro">
-
-        <div class="gauge">RPM: <span id="rpm">0</span></div>
-        <div class="gauge">Torque (Nm): <span id="torque">0</span></div>
-        <div class="gauge">Potência (HP): <span id="power">0</span></div>
-
-        <div id="powerBar"></div>
-
-        <button onclick="startTest()">Iniciar Teste</button>
-    </section>
-
-    <script src="script.js"></script>
+  <!-- Scripts -->
+  <script src="customizacao-e-rotacao.js"></script>
+  <script src="dinamometro.js"></script>
 </body>
 </html>
